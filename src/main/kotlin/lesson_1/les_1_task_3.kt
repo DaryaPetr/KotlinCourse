@@ -1,7 +1,6 @@
 package lesson_1
 
 fun main() {
-
     val launchTime = "09:07"
     val landingTime = "10:55"
     val year = 1961
