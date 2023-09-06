@@ -17,5 +17,4 @@ fun main() {
     }
     val arrivalHour = (departureHour + pathHour) % 24
     println("Поезд прибывает в $arrivalHour:$arrivalMinute")
-
 }
