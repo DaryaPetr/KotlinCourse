@@ -2,9 +2,13 @@ package lesson_3
 
 fun main() {
     val move = "D2-D4;0"
-    val from = move.substringBefore("-")
-    val to = move.substringAfter('-').substringBefore(';')
-    val moveNumber = move.substringAfter(';').toInt()
+//    var regex = """\W""".toRegex()
+//    regex = """[^A-Z0-9]""".toRegex()
+//    val regex = """[-;]""".toRegex()
+    val list = move.split("""[-;]""".toRegex())
+    val from = list[0]
+    val to = list[1]
+    val moveNumber = list[2]
     println(from)
     println(to)
     println(moveNumber)
