@@ -1,8 +1,10 @@
 package lesson_5
 
+const val SIZE = 100
+
 fun main() {
 
-    val numbers = List(100) { it + 1 }
+    val numbers = (1..SIZE).toList()
     val firstWinNum = numbers.shuffled().last()
     var secondWinNum = numbers.shuffled().last()
     while (secondWinNum == firstWinNum) secondWinNum = numbers.shuffled().last()
@@ -15,7 +17,7 @@ fun main() {
 
     for (i in 1..5) {
         print("Попытка $i: Введите число ")
-        val num = readLine()!!.toInt()
+        val num = readln().toInt()
         if (num == firstWinNum) firstIsGuessed = true
         if (num == secondWinNum) secondIsGuessed = true
         if (firstIsGuessed && secondIsGuessed) break
