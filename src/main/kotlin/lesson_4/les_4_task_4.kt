@@ -8,18 +8,11 @@ fun main() {
     val trainingTypesLists = mutableListOf(firstTypeList, secondTypeList)
     val currentTrainingDay = 5
     val startType = "Упражнения для мышц рук/пресса"
-    var startTypeNumber = 0
-    trainingNames.forEach { training ->
-        if (training.contains(startType))
-            startTypeNumber = trainingNames.indexOf(training) + 1
-    }
+    val startTypeNumber = trainingNames.indexOf(startType) + 1
 
-    var maxStringLength = -1
-
-    for (trainingList in trainingTypesLists)
-        for (training in trainingList)
-            if (training.length > maxStringLength) maxStringLength = training.length
-
+    val maxStringLength = trainingTypesLists.flatten().maxByOrNull {
+        it.length
+    }!!.length
 
     for (trainingList in trainingTypesLists) {
         val trainingCount = trainingTypesLists.size
@@ -30,6 +23,4 @@ fun main() {
             println(String.format("%${-(maxStringLength + 1)}s $result", trainingStr))
         }
     }
-
-
 }
