@@ -10,5 +10,4 @@ fun main() {
 
     if (currentYear - birthYear >= AGE_OF_MAJORITY) println("Показать экран со скрытым контентом")
     else println("Вернуться на главный экран")
-
 }
