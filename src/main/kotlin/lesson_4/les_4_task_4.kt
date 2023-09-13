@@ -10,9 +10,8 @@ fun main() {
     val startType = "Упражнения для мышц рук/пресса"
     val startTypeNumber = trainingNames.indexOf(startType) + 1
 
-    val maxStringLength = trainingTypesLists.flatten().maxByOrNull {
-        it.length
-    }!!.length
+    val maxStringLength = trainingTypesLists.flatten().maxByOrNull { it.length }?.length
+        ?: return
 
     for (trainingList in trainingTypesLists) {
         val trainingCount = trainingTypesLists.size
