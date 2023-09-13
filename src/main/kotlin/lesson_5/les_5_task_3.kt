@@ -13,7 +13,7 @@ fun main() {
 
     for (i in 1..5) {
         print("Попытка $i: Введите число ")
-        val num = readLine()!!.toInt()
+        val num = readln().toInt()
         if (num == firstWinNum) firstGuessed = true
         if (num == secondWinNum) secondGuessed = true
         if (firstGuessed && secondGuessed) break
