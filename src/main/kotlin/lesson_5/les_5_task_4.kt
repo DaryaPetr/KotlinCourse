@@ -12,11 +12,11 @@ fun main() {
             "[вздыхает ещё глубже...] Да, вперед, пожалуйста, вводите свои данные...")
     println()
     print("Имя пользователя: ")
-    val name = readLine()
+    val name = readln()
     if (name != userName) println("Такой пользователь не зарегистрирован. Хотите зарегистрироваться сейчас?")
     else {
         print("Введит пароль: ")
-        val pas = readLine()
+        val pas = readln()
         println()
         if (pas == password)
             println("[вздыхает...] Ваши данные проверены, и о, чудо, они верны... Пользователь \n" +
