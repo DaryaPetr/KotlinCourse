@@ -8,10 +8,10 @@ const val IS_WEATHER_FAVORABLE = true
 
 fun main() {
 
-    val isDamaged = readLine().toBoolean()
-    val crewCount = readLine()!!.toInt()
-    val provisionBoxesCount = readLine()!!.toInt()
-    val isWeatherFavorable = readLine().toBoolean()
+    val isDamaged = readln().toBoolean()
+    val crewCount = readln().toInt()
+    val provisionBoxesCount = readln().toInt()
+    val isWeatherFavorable = readln().toBoolean()
 
     val result = if ((provisionBoxesCount >= MIN_PROVISION_BOXES_COUNT) &&
         (isDamaged == IS_DAMAGED && crewCount in MIN_CREW_COUNT..MAX_CREW_COUNT &&
