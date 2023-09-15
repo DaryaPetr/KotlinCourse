@@ -1,13 +1,10 @@
 package lesson_5
 
-const val SIZE = 100
-
 fun main() {
 
-    val numbers = (1..SIZE).toList()
-    val firstWinNum = numbers.shuffled().last()
-    var secondWinNum = numbers.shuffled().last()
-    while (secondWinNum == firstWinNum) secondWinNum = numbers.shuffled().last()
+    val firstWinNum = (1..100).random()
+    var secondWinNum = (1..100).random()
+    while (secondWinNum == firstWinNum) secondWinNum = (1..100).random()
 
     println("Загадано 2 числа от 1 до 100. У вас есть 5 попыток, чтобы их угадать")
     println()
