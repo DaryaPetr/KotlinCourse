@@ -9,7 +9,7 @@ fun main() {
     val symb5 = generateCharSymbol()
     val symb6 = generateNumSymbol()
 
-    val password = "" + symb1 + symb2 + symb3 + symb4 +symb5 + symb6
+    val password = "$symb1" + symb2 + symb3 + symb4 + symb5 + symb6
     println("Пароль: $password")
 }
 
