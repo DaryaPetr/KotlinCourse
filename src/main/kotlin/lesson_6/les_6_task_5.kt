@@ -18,14 +18,12 @@ fun main() {
         else println("\nАвторизация прошла успешно\n")
     } while (userLogin != login || userPassword != password)
 
-    val isNotBot = checkIsNotBot()
-    if (isNotBot) println("Добро пожаловать!")
+    if (checkIsNotBot()) println("Добро пожаловать!")
     else println("Доступ запрещён.")
 }
 
 fun checkIsNotBot(): Boolean {
 
-    var isNotBot = false
     val attemptsCount = 3
 
     for (i in 1..attemptsCount) {
@@ -34,9 +32,9 @@ fun checkIsNotBot(): Boolean {
         print("Для входа в приложение введите результат выражения $firstNum + $secondNum = ")
         val result = readln().toInt()
         if (result == firstNum + secondNum)
-            isNotBot = true
-        if (!isNotBot) println("Неверно. Попыток осталось: ${attemptsCount - i}")
+            return true
+       println("Неверно. Попыток осталось: ${attemptsCount - i}")
     }
 
-    return isNotBot
+    return false
 }
