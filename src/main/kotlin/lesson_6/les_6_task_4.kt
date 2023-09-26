@@ -6,18 +6,20 @@ fun main() {
 
     val number = (1..9).random()
 
-    println("Загадано число от 1 до 9. У вас есть 5 попыток, чтобы угадать его")
-    println()
+    println("Загадано число от 1 до 9. У вас есть 5 попыток, чтобы угадать его\n")
 
-    for (i in 1..ATTEMPT_COUNT) {
-        print("Попытка $i: Введите число ")
+    var count = ATTEMPT_COUNT
+
+    while (count-- > 0) {
+        print("Попытка ${ATTEMPT_COUNT - count}: Введите число ")
         val num = readln().toInt()
         if (num == number) {
             println("Это была великолепная игра!")
-            break
+            return
         }
-        else println("Неверно. Попыток осталось: ${ATTEMPT_COUNT - i}")
-        if (i == ATTEMPT_COUNT) println("Было загадано число $number")
+        else println("Неверно. Попыток осталось: $count")
     }
+
+    println("Было загадано число $number")
 
 }
