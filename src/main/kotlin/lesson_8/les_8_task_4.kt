@@ -21,6 +21,5 @@ fun main() {
 }
 
 fun printArray(array: Array<String>) {
-    for (i in array)
-        println(i)
+    for (i in array) println(i)
 }
