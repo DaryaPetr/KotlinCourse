@@ -9,6 +9,7 @@ fun main() {
         println("Секунд осталось: $i")
         Thread.sleep(1000)
     }
+
     println("Время вышло")
 
 }
