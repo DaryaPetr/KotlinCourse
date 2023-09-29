@@ -7,5 +7,4 @@ fun main() {
     val ingredient = readln()
     if (ingredient in saladIngredients) println("Ингредиент [$ingredient] в рецепте есть")
     else println("Такого ингредиента в рецепте нет")
-
 }
