@@ -10,9 +10,13 @@ fun main() {
         ingredients.add(readln())
     }
 
-    ingredients = ingredients.distinctBy{it.uppercase()}.sorted().toMutableList()
+    ingredients = ingredients.distinctBy { it.uppercase() }.sorted().toMutableList()
 
-    println("Ингредиенты: ${ingredients.joinToString(separator = ",") { 
-                ingredient -> ingredient.replaceFirstChar { it.uppercase() }
-            }}.")
+    println("Ингредиенты: ${
+        ingredients.joinToString(separator = ",") { ingredient ->
+            ingredient.replaceFirstChar { it.uppercase() }
+        }
+    }.")
+    println(ingredients)
+
 }
