@@ -6,9 +6,11 @@ const val FIRST_NUM_SYMBOL = 48
 const val LAST_NUM_SYMBOL = 57
 
 fun main() {
+
     println("Какой длины должен быть пароль?")
     val password = generatePassword(readln().toInt())
     println(password)
+
 }
 
 fun generatePassword(length: Int): String {
