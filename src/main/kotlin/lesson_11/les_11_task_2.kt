@@ -1,10 +1,10 @@
 package lesson_11
 
 class User(
-    var id: Int,
-    var login: String,
+    val id: Int,
+    val login: String,
     var password: String,
-    var mail: String,
+    val mail: String,
     var bio: Int = 0
 ) {
 
