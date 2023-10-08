@@ -5,7 +5,7 @@ class User(
     val login: String,
     var password: String,
     val mail: String,
-    var bio: Int = 0
+    var bio: String = ""
 ) {
 
     fun printData() {
@@ -13,7 +13,7 @@ class User(
     }
 
     fun setBio() {
-        bio = readln().toInt()
+        bio = readln()
     }
 
     fun setPasword(pas: String) {
