@@ -19,7 +19,9 @@ fun main() {
     weather1.printData()
     weather2.printData()
     weather1.dayTemperature = 20
+    weather1.atmospherePressure = 1
     weather2.isRain = true
+    weather2.atmospherePressure = 7000
     weather1.printData()
     weather2.printData()
 
