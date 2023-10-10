@@ -1,6 +1,6 @@
 package lesson_11
 
-class User(
+class User2(
     val id: Int,
     val login: String,
     var password: String,
@@ -46,7 +46,7 @@ fun main() {
     print("Введите почту ")
     val mail = readln()
 
-    val user = User(id, login, password, mail)
+    val user = User2(id, login, password, mail)
     user.printData()
     user.changePassword()
     user.printData()
