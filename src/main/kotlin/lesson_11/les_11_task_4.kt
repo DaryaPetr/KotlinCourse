@@ -23,7 +23,7 @@ class Contact(
 
     fun toVideo() = println(toVideo)
 
-    fun  toMail() = println(toMail)
+    fun toMail() = println(toMail)
 
     fun toFaceTimeVideo() = println(faceTimeVideo)
 
