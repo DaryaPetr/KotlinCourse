@@ -6,14 +6,14 @@ class Contact133(
     val company: String?,
 ) {
 
-    fun printContact132() =
+    fun printContact133() =
         println("Имя: $name. Номер: $phone. Компания: ${if (company != null) company else "не указано"}")
 
 }
 
 fun main() {
 
-    val contacts = mutableListOf(
+    val contacts = listOf(
         Contact133("First", 89123456789, null),
         Contact133("Second", 89342419111, "company1"),
         Contact133("Third", 89342420142, null),
