@@ -1,10 +1,10 @@
 package lesson_12
 
 class Weather2(
-    val _dayTemperature: Int,
-    val _nightTemperature: Int,
-    val _isRain: Boolean,
-    val _atmospherePressure: Int,
+    _dayTemperature: Int,
+    _nightTemperature: Int,
+    _isRain: Boolean,
+    _atmospherePressure: Int,
 ) {
     var dayTemperature = _dayTemperature
     var nightTemperature = _nightTemperature
