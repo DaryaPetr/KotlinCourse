@@ -39,7 +39,7 @@ fun main() {
     }
 
     println("\nСреднее значение дневной температуры: %.1f".format(dayTemperatures.average()))
-    println(String.format("Среднее значение ночной температуры: %.1f", nightTemperatures.average()))
+    println("Среднее значение ночной температуры: %.1f".format(nightTemperatures.average()))
     println("Количество дней с осадками: ${rainDays.size}")
 
 }
