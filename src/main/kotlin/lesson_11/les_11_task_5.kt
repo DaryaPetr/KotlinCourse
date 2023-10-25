@@ -41,15 +41,13 @@ class Forum() {
     val messages: MutableList<String> = mutableListOf()
 
     fun createNewUser() {
-        print("Введите id ")
-        val id = readln().toInt()
         print("Введите логин ")
         val login = readln()
         print("Введите пароль ")
         val password = readln()
         print("Введите почту ")
         val mail = readln()
-        val user = User6(id, login, password, mail)
+        val user = User6(users.size + 1, login, password, mail)
         users.add(user)
     }
 
@@ -69,10 +67,10 @@ fun main() {
     val forum = Forum()
     forum.createNewUser()
     forum.createNewUser()
-    forum.createNewMessage(1,"111")
-    forum.createNewMessage(1,"aaa")
-    forum.createNewMessage(2,"222")
-    forum.createNewMessage(2,"bbb")
+    forum.createNewMessage(forum.users[0].id,"111")
+    forum.createNewMessage(forum.users[0].id,"aaa")
+    forum.createNewMessage(forum.users[1].id,"222")
+    forum.createNewMessage(forum.users[1].id,"bbb")
     forum.printThread()
 
 }
