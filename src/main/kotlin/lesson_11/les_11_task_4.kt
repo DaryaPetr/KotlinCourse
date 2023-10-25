@@ -32,19 +32,17 @@ class Contact(
 
 class PinnedContact(
     val status: String,
-    val contact: Contact,
-) {
-    fun printName() = println(contact.userName)
-}
+    val userNameLink: String,
+)
 
 fun main() {
 
     val wife = Contact("@a1", "wife","u11", "u21","111", "221", "mail1", )
     val friend1 = Contact("@a2", "friend","u12", "u22","112", "222", "mail2", )
     val friend2 = Contact("@a3", "friend","u13", "u23","113", "223", "mail3", )
-    val pinnedContact1 = PinnedContact("жена", wife,)
-    val pinnedContact2 = PinnedContact("подруга", friend1,)
-    val pinnedContact3 = PinnedContact("подруга", friend2,)
+    val pinnedContact1 = PinnedContact("жена", "@wife",)
+    val pinnedContact2 = PinnedContact("подруга", "@friend1",)
+    val pinnedContact3 = PinnedContact("подруга", "@friend2",)
     val pinnedContacts = listOf(pinnedContact1, pinnedContact2, pinnedContact3)
     val user = Contact("@mouse", "@first_name","First Name", "Second Name", "89999994242", "89998884242", "mail@mail.ru", pinnedContacts)
 }
