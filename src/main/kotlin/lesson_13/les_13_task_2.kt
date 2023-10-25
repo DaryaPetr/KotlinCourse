@@ -3,7 +3,7 @@ package lesson_13
 class Contact132(
     val name: String,
     val phone: Long,
-    val company: String?,
+    val company: String? = null,
 ) {
 
     fun printContact132() =
@@ -13,7 +13,7 @@ class Contact132(
 
 fun main() {
 
-    var contact = Contact132("Ростислав", 89123456789, null)
+    var contact = Contact132("Ростислав", 89123456789)
     contact.printContact132()
     contact = Contact132("Ростислав", 89123456789, "Reddit")
     contact.printContact132()
