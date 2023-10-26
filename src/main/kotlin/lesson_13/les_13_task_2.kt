@@ -7,7 +7,7 @@ class Contact132(
 ) {
 
     fun printContact132() =
-        println("Имя: $name. Номер: $phone. Компания: ${if (company != null) company else "не указано"}")
+        println("Имя: $name. Номер: $phone. Компания: ${ company ?: "не указано"}")
 
 }
 
