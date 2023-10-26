@@ -7,7 +7,7 @@ class Contact133(
 ) {
 
     fun printContact133() =
-        println("Имя: $name. Номер: $phone. Компания: ${if (company != null) company else "не указано"}")
+        println("Имя: $name. Номер: $phone. Компания: ${company ?: "не указано"}")
 
 }
 
@@ -20,6 +20,12 @@ fun main() {
         Contact133("Forth", 89342502354, "null"),
         Contact133("Fifth", 89324532032, "company2")
     )
+
+    contacts.forEach {
+        it.printContact133()
+    }
+
+    println()
 
     contacts.forEach {
         if (it.company != null) println(it.company)
