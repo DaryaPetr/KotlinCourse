@@ -2,6 +2,9 @@ package lesson_14
 
 import kotlin.math.PI
 
+const val BLACK = "BLACK"
+const val WHITE = "WHITE"
+
 abstract class Figure{
 
     abstract val color: String
@@ -34,7 +37,7 @@ class Rectangle(
 
 fun main() {
 
-    val figures = mutableListOf<Figure>(
+    val figures = listOf<Figure>(
         Circle("Black", 3.0),
         Circle("White", 5.0),
         Rectangle("White", 2.0, 4.0),
@@ -42,25 +45,19 @@ fun main() {
         Rectangle("White", 1.0, 4.0),
     )
 
-    println("Сумма периметров всех чёрных фигур: ${blackPerimeterSum(figures)}")
-    println("Сумма площадей всех белых фигур: ${whiteAreaSum(figures)}")
+    val (blackPerimeterSum, whiteAreaSum) = computeSum(figures)
+
+    println("Сумма периметров всех чёрных фигур: $blackPerimeterSum")
+    println("Сумма площадей всех белых фигур: $whiteAreaSum")
 
 }
 
-fun blackPerimeterSum(figures: MutableList<Figure>): Double {
-    var sum = 0.0
-    figures.forEach { figure ->
-        if (figure.color == "Black")
-            sum += figure.perimeter()
-    }
-    return  sum
-}
-
-fun whiteAreaSum(figures: MutableList<Figure>): Double {
-    var sum = 0.0
-    figures.forEach { figure ->
-        if (figure.color == "White")
-            sum += figure.area()
-    }
-    return  sum
+fun computeSum(figures: List<Figure>): Pair<Double, Double> {
+    val blackPerimeterSum = figures
+        .filter { it.color.uppercase() == BLACK }
+        .sumOf { it.perimeter() }
+    val whiteAreaSum = figures
+        .filter { it.color.uppercase() == WHITE }
+        .sumOf { it.area() }
+    return (blackPerimeterSum to whiteAreaSum)
 }
